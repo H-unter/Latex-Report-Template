@@ -1,0 +1,24 @@
+\documentclass[12pt]{article}
+\def\name{Hunter Kruger-Ilingworth}
+\def\doctitle{Latex Template}
+\def\subjectcode{EG1000}
+\def\studentnumber{14198489}
+
+\input{header}
+
+\begin{document}
+% Create the title page
+\begin{titlepage}
+    \maketitle
+    \thispagestyle{empty} % Optional: suppresses page numbering on the title page
+\end{titlepage}
+
+% Table of Contents
+\thispagestyle{empty}
+\tableofcontents
+
+%Document
+\newpage
+\input{sec_circuits}
+\input{sec_maths}
+\end{document}

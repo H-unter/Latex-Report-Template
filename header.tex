@@ -1,0 +1,37 @@
+% Geometry and Layout
+\usepackage[margin=1in]{geometry}
+
+% Graphics and Diagrams
+\usepackage{graphicx} % Required for inserting images
+\usepackage[american]{circuitikz}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+% Text Content
+\usepackage{lipsum} % Dummy text
+
+% Headers and Footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{\subjectcode{} - \doctitle{}}  
+\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}} 
+\fancyfoot[L]{\name{}}
+\renewcommand{\headrulewidth}{0pt}
+
+% Caption Customization
+\usepackage{caption}
+\DeclareCaptionLabelSeparator{IEEE}{.\quad }
+\captionsetup[figure]{name=Fig., labelsep=IEEE}
+\captionsetup{format=hang, labelfont=bf}
+\captionsetup{justification=raggedright,singlelinecheck=false}
+
+% Document Metadata
+\title{\doctitle{}}
+\author{\name{} (\studentnumber{})}
+\date{\today}
+
+% First Page Style
+\thispagestyle{empty}
