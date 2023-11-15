@@ -2,3 +2,12 @@
 Template for making IEEEish style reports
 - `main` branch: IEEE LaTeX template files.
 - `Example-PH2019` branch: an example use case
+
+## Features
+- Automatic document outline for easy navigation
+- Contents page hyperlinking
+- Ability to render 2d/3d graphics in latex as opposed to screenshotting a premade one (though it is a pain, and screenshotting ends up being easier)
+
+## TODO
+- Automated solution for displaying tables by including a path to a csv file
+- Configure referencing
