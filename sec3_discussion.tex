@@ -29,18 +29,29 @@ Experiment 2 involved charging a conductive conical shape to measure the charge 
 
 The results in Table 5  show that the narrower end of the conical shape had the highest charge density with an average charge of 7.44 V. Whereas; the larger end had an average charge of 5.48 V. Points A, B, C and D had average voltages of 5.54, 4.76, 5.46, 5.5 volts. The highest maximum error for this experiment was 0.644V, which is reasonable considering the large measured values..
 
-The non-uniform charge distribution that was observed can be explained using Gauss’ law:
+Consider a charged conductor made out of two spheres of radii \( R_1 \) and \( R_2 \), connected
+with a conducting wire. Assume that \( R_1 < R_2 \), and that the spheres are far apart so that
+effects of electrostatic interactions between the spheres can be neglected. Then, the
+surface charge density, the quantity that describes how crowded the charges are, is higher
+at the smaller sphere.
 
-$$\oint \vec{E} \cdot d\vec{A} = \frac{Q_{encl.}}{\epsilon_{0}}$$
-Let $Q_{encl.} = \sigma A$, where $\sigma$ is the surface charge density of the object, and $A$ is the surface area of the object.
+To see why, remember that, since this system is a conductor, its surface is an
+equipotential. In particular, the electric potential on the surface of two spheres is the
+same, \( V_1 = V_2 \), which implies that
 
-$$\oint \vec{E} \cdot d\vec{A} = \frac{\sigma A}{\epsilon_{0}}$$
-Let the Gaussian surface be a sphere with a radius, $r_{0}$
-$$E(4\pi r_{0}^2) = \frac{\sigma A}{\epsilon_{0}}$$
-$$\sigma = \frac{4 \epsilon_{0} E \pi r_{0}^2}{A}  $$
-thus, 
-$$\sigma  \propto  \frac{1}{A}$$
-Therefore, charge density is inversely proportional to the surface area - having a smaller surface area yields a higher charge density. This equation explains the different charge densities observed on the conical shape. Suppose the conical shape is modeled as two spheres with differing radii connected by conductive wire. In that case, the smaller circle (analogous to the narrower end of the conical shape), with the smaller surface area, has a higher charge density and vice versa.
+\[ \frac{q_1}{R_1} = \frac{q_2}{R_2} \Rightarrow \frac{q_1}{q_2} = \frac{R_1}{R_2} < 1, \]
+
+i.e., that most of the charge is in the bigger sphere. However, the ratio of the surface
+charge densities behaves the opposite way:
+
+\[ \frac{\sigma_1}{\sigma_2} = \frac{\frac{q_1}{4\pi R_1^2}}{\frac{q_2}{4\pi R_2^2}} = \frac{q_1}{q_2} \cdot \frac{R_2^2}{R_1^2} = \frac{R_2}{R_1} > 1. \]
+
+This means that the surface charge density of the smaller sphere is larger, i.e., that the
+charge is more crowded (you find more charge per unit area) on the smaller sphere.
+
+A generalization of this argument shows that charges are more crowded at pointy parts of
+a conductor, as opposed to the more gently-curved parts.
+
 
 \newpage
 
