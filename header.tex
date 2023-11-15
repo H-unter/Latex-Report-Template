@@ -1,39 +1,39 @@
 % Geometry and Layout
-\usepackage[margin=1in]{geometry}
+    \usepackage[margin=1in]{geometry}
 
 % Graphics and Diagrams
-\usepackage{graphicx} % Required for inserting images
-\usepackage[american]{circuitikz}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta}
-\usepackage{pgfplots}
-\pgfplotsset{compat=newest}
-\usepackage{booktabs}
+    \usepackage{graphicx} % Required for inserting images
+    \usepackage[american]{circuitikz}
+    \usepackage{tikz}
+    \usepackage{tikz-3dplot}
+    \usetikzlibrary{arrows.meta}
+    \usepackage{pgfplots}
+    \pgfplotsset{compat=newest}
+    \usepackage{booktabs}
 
-% Text Content
-\usepackage{lipsum} % Dummy text
-\usepackage{hyperref}
+% Text Content / Math
+    \usepackage{lipsum} % Dummy text
+    \usepackage{hyperref}
+    \usepackage{amsmath} % For sum symbol and other math formatting
 
 % Headers and Footers
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{} 
-\fancyhead[L]{\subjectcode{} - \doctitle{}}  
-\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}} 
-\fancyfoot[L]{\name{}}
-\renewcommand{\headrulewidth}{0pt}
+    \usepackage{lastpage}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhf{} 
+    \fancyhead[L]{\subjectcode{} - \doctitle{}}  
+    \fancyfoot[R]{Page \thepage\ of \pageref{LastPage}} 
+    \fancyfoot[L]{\name{}}
+    \renewcommand{\headrulewidth}{0pt}
 
 % Caption Customization
-\usepackage{caption}
-\DeclareCaptionLabelSeparator{IEEE}{.\quad }
-\captionsetup[figure]{name=Fig., labelsep=IEEE}
-\captionsetup{format=hang, labelfont=bf}
-\captionsetup{justification=raggedright,singlelinecheck=false}
+    \usepackage{caption}
+    \DeclareCaptionLabelSeparator{IEEE}{.\quad }
+    \captionsetup[figure]{name=Fig., labelsep=IEEE}
+    \captionsetup{format=hang, labelfont=bf}
+    \captionsetup{justification=raggedright,singlelinecheck=false}
 
 % Document Metadata
-\title{\doctitle{}}
-\author{\name{} (\studentnumber{})}
-\date{\today}
-
-% First Page Style
-\thispagestyle{empty}
+    \title{\doctitle{}}
+    \author{\name{} (\studentnumber{})}
+    \date{\today}

@@ -63,10 +63,30 @@ The reason for the lack of charge on the inside surface can be explained using G
 
 \begin{figure}[h]
     \centering
-    \includegraphics[height=250px]{photos/hollowtheory.png}
-    \caption{Gaussian surface placed within hollow sphere (Tushar, 2020)}
+    \begin{tikzpicture}[scale=1.5] % Increase the scale for a larger drawing
+      % Define radius and line length
+      \def\innerRadius{1}
+      \def\outerRadius{1.1}
+      \def\lineLength{0.7}
+      \def\chargeDist{0.9}
+      
+      % Draw the central circle with the text
+      \node[circle,draw=black,fill=white,minimum size=2*\innerRadius cm,text width=1.8*\innerRadius cm,align=center] (center) at (0,0) {$\sum q=0$};
+      
+      % Draw the outer circle
+      \draw[blue,thick] (0,0) circle (\outerRadius cm);
+
+      % Draw the charges and the electric field lines
+      \foreach \angle in {0,45,...,315} {
+        \draw[->,red,thick] (\angle:\outerRadius cm) -- (\angle:\outerRadius cm+\lineLength cm); % Electric field lines
+        \node at (\angle:\outerRadius cm+\chargeDist cm) {$\vec{E}$};
+      }
+    \end{tikzpicture}
+    \caption{Gaussian surface placed within hollow sphere}
     \label{fig:gaussiansurface}
 \end{figure}
+
+
 According to Gauss' law, any electric field experienced on the surface of this sphere would be proportional to the amount of charge enclosed within the Gaussian surface. In the case of this hypothetical sphere, there is no enclosed charge. 
 
 $$\oint \vec{E} \cdot d\vec{A} = \frac{Q_{encl.}}{\epsilon_{0}}$$
@@ -77,6 +97,5 @@ for $\oint \vec{E} \cdot d\vec{A}$ to equal $0$, one of the two must be true:
 1) the electric field is 0, and thus no charge exists on the inside surface of the hollow sphere, or
 2) the dot product of the two vectors is $0$, meaning they are perpendicular.
 Since both the hollow and Gaussian spheres are spherical, all $\vec{E}$ and $d\vec{A}$ vectors are parallel. This can only mean that the electric field is 0, and there would, in theory, be no charge on the inside surface of the hollow sphere.
-
 
 \newpage
