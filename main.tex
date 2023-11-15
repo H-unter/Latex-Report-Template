@@ -1,25 +1,27 @@
+
 \documentclass[12pt]{article}
 \def\name{Hunter Kruger-Ilingworth}
-\def\doctitle{Latex Template}
+\def\doctitle{Latex Template Example Use Case}
 \def\subjectcode{EG1000}
 \def\studentnumber{14198489}
-
 \input{header}
 
 \begin{document}
-% Create the title page
-\begin{titlepage}
-    \maketitle
-    \thispagestyle{empty} % Optional: suppresses page numbering on the title page
-\end{titlepage}
+    % Create the title page
+    \begin{titlepage}
+        \maketitle
+        \thispagestyle{empty} %suppresses page numbering on the title page
+    \end{titlepage}
 
-% Table of Contents
-\thispagestyle{empty}
-\tableofcontents
-\listoffigures
+    % Table of Contents
+    \thispagestyle{empty} %suppresses page numbering on the contents page
+    \tableofcontents
+    \listoffigures
+    \listoftables
 
-%Document
-\newpage
-\input{sec_circuits}
-\input{sec_maths}
+    % Document
+    \newpage
+    \input{sec1_introduction}
+    \input{sec2_results}
+    \input{sec3_discussion}
 \end{document}
