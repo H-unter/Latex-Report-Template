@@ -15,3 +15,4 @@ Template for making IEEEish style engineering reports
 - Make use of `\usepackage{cleverref}` to automate figure referencing
 - Change from `\input` to `\include` for subsections to make use of `\includeonly{}` function in header to reduce compiling times by excluding files not being edited
 - Code chunks with [syntax highlighting](https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted#Including_code_from_a_file)
+- Remove automatic paragraph indenting with either `\setlength{\parindent}{0pt}` or `\parskip`
