@@ -28,7 +28,7 @@
         stringstyle=\color{red},              % Style of strings, assuming red
         basicstyle=\footnotesize\color{codegray}\ttfamily, % Set font size, monospaced font, and color        breakatwhitespace=false,              % Automatic line breaking only at whitespace
         breaklines=true,                      % Automatic line breaking
-        captionpos=b,                         % Caption position
+        captionpos=t,                         % Caption position is on top
         keepspaces=true,                      % Keeps spaces in text
         numbers=left,                         % Line number position
         numbersep=5pt,                        % How far the line numbers are from the code
@@ -49,6 +49,7 @@
     \usepackage{fancyhdr}
     \pagestyle{fancy}
     \fancyhf{} 
+    \setlength{\headheight}{15pt}
     \fancyhead[L]{\subjectcode{} - \doctitle{}}  
     \fancyfoot[R]{Page \thepage\ of \pageref{LastPage}} 
     \fancyfoot[L]{\name{}}
