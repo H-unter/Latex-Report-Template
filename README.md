@@ -9,8 +9,11 @@ Template for making IEEEish style engineering reports
 - Ability to render 2d/3d graphics in latex as opposed to screenshotting a premade one (though it is a pain, and screenshotting ends up being easier)
 
 ## TODO
-- Automated solution for displaying tables by including a path to a `.csv` file
+- Generalise and improve csv file implementation
+    - Round numbers
+    - Figure out header names
 - Configure referencing
+- Tikz colour boxes
 
 
 
