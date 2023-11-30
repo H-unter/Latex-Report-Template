@@ -1,5 +1,6 @@
 % Geometry and Layout
     \usepackage[margin=1in]{geometry}
+    \usepackage{parskip}
 
 % Graphics and Diagrams
     \usepackage{xcolor}
@@ -50,13 +51,14 @@
     \pagestyle{fancy}
     \fancyhf{} 
     \setlength{\headheight}{15pt}
-    \fancyhead[L]{\subjectcode{} - \doctitle{}}  
+    \fancyhead[L]{\subjectcode{} - \doctitle{} - \nouppercase{\leftmark}}
     \fancyfoot[R]{Page \thepage\ of \pageref{LastPage}} 
     \fancyfoot[L]{\name{}}
     \renewcommand{\headrulewidth}{0pt}
 
-% Caption Customization
+% Caption and Referencing Customization
     \usepackage{caption}
+    \usepackage{cleveref}
     \DeclareCaptionLabelSeparator{IEEE}{.\quad }
     \captionsetup[figure]{name=Fig., labelsep=IEEE}
     \captionsetup{format=hang, labelfont=bf}

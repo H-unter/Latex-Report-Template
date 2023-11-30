@@ -11,8 +11,7 @@ Template for making IEEEish style engineering reports
 ## TODO
 - Automated solution for displaying tables by including a path to a `.csv` file
 - Configure referencing
-- Use `.sty` for header file which is currently `.tex`
-- Make use of `\usepackage{cleverref}` to automate figure referencing
-- Change from `\input` to `\include` for subsections to make use of `\includeonly{}` function in header to reduce compiling times by excluding files not being edited
-- Code chunks with [syntax highlighting](https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted#Including_code_from_a_file) and line numbering using `\verbatim[numbers=left]{}`
-- Remove automatic paragraph indenting with either `\setlength{\parindent}{0pt}` or `\parskip`
+
+
+
+
