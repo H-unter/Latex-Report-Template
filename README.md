@@ -13,7 +13,7 @@ Template for making IEEEish style engineering reports
     - Round numbers
     - Figure out header names
 - Configure referencing
-- Tikz colour boxes
+- include code chunks in list of figures (and somehow configure excluding the list of tables in the contents page if there are no tables) some kind of package or if statement?
 
 
 
