@@ -15,7 +15,6 @@
     \usepackage{tcolorbox}
 
 % CSV Table input
-
     \usepackage{csvsimple, booktabs}
 
 % Code Chunk Formatting
@@ -52,12 +51,16 @@
 % Headers and Footers
     \usepackage{lastpage}
     \usepackage{fancyhdr}
+    \makeatletter
+    \renewcommand{\@seccntformat}[1]{}
+    \makeatother
     \pagestyle{fancy}
     \fancyhf{} 
     \setlength{\headheight}{15pt}
-    \fancyhead[L]{\subjectcode{} - \doctitle{} - \nouppercase{\leftmark}}
-    \fancyfoot[R]{Page \thepage\ of \pageref{LastPage}} 
+    \fancyhead[L]{\subjectcode{} - \doctitle{}}
+    \fancyhead[R]{\nouppercase{\leftmark}}
     \fancyfoot[L]{\name{}}
+    \fancyfoot[R]{Page \thepage\ of \pageref{LastPage}} 
     \renewcommand{\headrulewidth}{0pt}
 
 % Caption and Referencing Customization
