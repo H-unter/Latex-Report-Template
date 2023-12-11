@@ -1,0 +1,77 @@
+% Geometry and Layout
+    \usepackage[margin=1in]{geometry}
+    \usepackage{parskip}
+
+% Graphics and Diagrams
+    \usepackage{xcolor}
+    \usepackage{graphicx} % Required for inserting images
+    \usepackage[american]{circuitikz}
+    \usepackage{tikz}
+    \usepackage{tikz-3dplot}
+    \usetikzlibrary{arrows.meta}
+    \usepackage{pgfplots}
+    \pgfplotsset{compat=newest}
+    \usepackage{listings}
+    \usepackage{tcolorbox}
+
+% CSV Table input
+    \usepackage{csvsimple, booktabs}
+
+% Code Chunk Formatting
+    \definecolor{comment_color}{rgb}{0.52,0.38,0.78}
+    \definecolor{keyword_color}{rgb}{0.84,0.27,0.3}
+    \definecolor{codegray}{rgb}{0.4,0.4,0.4}
+    \definecolor{background_color}{rgb}{0.95,0.95,0.95}
+    \usepackage{inconsolata} % Consolas-style font from the inconsolata package
+
+    \lstset{
+        backgroundcolor=\color{background_color},   % Choose the background color
+        commentstyle=\color{comment_color},       % Style of comments
+        keywordstyle=\color{keyword_color},        % Style of keywords
+        numberstyle=\tiny\color{codegray},    % Style of line numbers
+        stringstyle=\color{red},              % Style of strings, assuming red
+        basicstyle=\footnotesize\color{codegray}\ttfamily, % Set font size, monospaced font, and color        breakatwhitespace=false,              % Automatic line breaking only at whitespace
+        breaklines=true,                      % Automatic line breaking
+        captionpos=t,                         % Caption position is on top
+        keepspaces=true,                      % Keeps spaces in text
+        numbers=left,                         % Line number position
+        numbersep=5pt,                        % How far the line numbers are from the code
+        showspaces=false,                     % Show spaces in the code
+        showstringspaces=false,               % Underline spaces within strings only
+        showtabs=false,                       % Show tabs within strings adding particular underscores
+        tabsize=2,                            % Sets default tab size
+        title=\lstname                        % Show the filename of files included with \lstinputlisting
+    }
+
+% Text Content / Math
+    \usepackage{lipsum} % Dummy text
+    \usepackage{hyperref}
+    \usepackage{amsmath} % For sum symbol and other math formatting
+
+% Headers and Footers
+    \usepackage{lastpage}
+    \usepackage{fancyhdr}
+    \makeatletter
+    \renewcommand{\@seccntformat}[1]{}
+    \makeatother
+    \pagestyle{fancy}
+    \fancyhf{} 
+    \setlength{\headheight}{15pt}
+    \fancyhead[L]{\subjectcode{} - \doctitle{}}
+    \fancyhead[R]{\nouppercase{\leftmark}}
+    \fancyfoot[L]{\name{}}
+    \fancyfoot[R]{Page \thepage\ of \pageref{LastPage}} 
+    \renewcommand{\headrulewidth}{0pt}
+
+% Caption and Referencing Customization
+    \usepackage{caption}
+    \usepackage{cleveref}
+    \DeclareCaptionLabelSeparator{IEEE}{.\quad }
+    \captionsetup[figure]{name=Fig., labelsep=IEEE}
+    \captionsetup{format=hang, labelfont=bf}
+    \captionsetup{justification=raggedright,singlelinecheck=false}
+
+% Document Metadata
+    \title{\doctitle{}}
+    \author{\name{} (\studentnumber{})}
+    \date{\today}

@@ -1,0 +1,14 @@
+\section{Table input from CSV}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{llllllll} % Adjust the number of columns and alignment as needed
+            \toprule
+            Country & Population & Area & Oil Prod. & GDP & Education & Roadways & Net Users \\ % Manually defined headers
+            \midrule
+            \csvreader[head to column names, late after line=\\]{tables/aug8.csv}{}
+            {\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv & \csvcolvi & \csvcolvii & \csvcolviii}
+            \bottomrule
+        \end{tabular}
+        \caption{Your Table Caption}
+        \label{tab:your_table_label}
+    \end{table}

@@ -4,8 +4,9 @@
 \def\doctitle{Latex Template}
 \def\subjectcode{EDP445}
 \def\studentnumber{14198489}
-\input{header}
-
+\input{header.sty}
+%Choose which files are re-rendered
+%\includeonly{}
 \begin{document}
     % Create the title page
     \begin{titlepage}
@@ -14,14 +15,16 @@
     \end{titlepage}
 
     % Table of Contents
-    \thispagestyle{empty} %suppresses page numbering on the contents page
+    \thispagestyle{empty} % Suppresses page numbering on the contents page
     \tableofcontents
+
     \listoffigures
     \listoftables
 
     % Document - place new files as needed
     \newpage
-    \input{sec1_introduction}
-    \input{sec2_results}
-    \input{sec3_discussion}
+    \include{sec1_code}
+    \include{sec2_figure_rendering}
+    \include{sec3_tables}
+    \include{sec4_tcolorbox}
 \end{document}
