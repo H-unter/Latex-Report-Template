@@ -1,8 +1,8 @@
 
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 \def\name{Hunter Kruger-Ilingworth}
-\def\doctitle{Latex Template}
-\def\subjectcode{EDP445}
+\def\doctitle{\LaTeX \   Template}
+\def\subjectcode{PH1005}
 \def\studentnumber{14198489}
 \input{header.sty}
 %Choose which files are re-rendered
@@ -22,9 +22,13 @@
     \listoftables
 
     % Document - place new files as needed
-    \newpage
-    \include{sec1_intro}
-    \include{sec2_results}
-    \include{sec3_discussion}
-    \include{sec4_conclusion}
+    \clearpage
+
+    %\begin{multicols}{2}
+    \input{sec1_intro}
+    \input{sec2_results}
+    \input{sec3_discussion}
+    \input{sec4_conclusion}
+    %\end{multicols}
+    
 \end{document}

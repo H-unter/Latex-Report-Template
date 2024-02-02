@@ -1,6 +1,7 @@
 % Geometry and Layout
     \usepackage[margin=1in]{geometry}
     \usepackage{parskip}
+    \usepackage{multicol}
 
 % Graphics and Diagrams
     \usepackage{xcolor}
@@ -20,6 +21,7 @@
 % Code Chunk Formatting
     \definecolor{comment_color}{rgb}{0.52,0.38,0.78}
     \definecolor{keyword_color}{rgb}{0.84,0.27,0.3}
+    \definecolor{string_color}{rgb}{0.0392, 0.3255, 0.6902} %unused
     \definecolor{codegray}{rgb}{0.4,0.4,0.4}
     \definecolor{background_color}{rgb}{0.95,0.95,0.95}
     \usepackage{inconsolata} % Consolas-style font from the inconsolata package
@@ -58,7 +60,7 @@
     \fancyhf{} 
     \setlength{\headheight}{15pt}
     \fancyhead[L]{\subjectcode{} - \doctitle{}}
-    \fancyhead[R]{\nouppercase{\leftmark}}
+    \fancyhead[R]{} % Rearrange as you please
     \fancyfoot[L]{\name{}}
     \fancyfoot[R]{Page \thepage\ of \pageref{LastPage}} 
     \renewcommand{\headrulewidth}{0pt}
