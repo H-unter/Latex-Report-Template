@@ -7,6 +7,16 @@
 \input{header.sty}
 %Choose which files are re-rendered
 %\includeonly{}
+
+\newcommand{\insertimage}[3]{
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{photos/#1} % Image filename, prefixed with 'photos/'
+    \caption{#2} % Caption
+    \label{fig:#3} % Label
+\end{figure}
+}
+
 \begin{document}
     % Create the title page
     \begin{titlepage}
