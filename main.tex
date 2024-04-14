@@ -17,6 +17,23 @@
 \end{figure}
 }
 
+\newcommand{\insertbigimage}[3]{
+\begin{figure*}[h]
+    \centering
+    \includegraphics[width=\linewidth]{photos/#1} % Image filename, prefixed with 'photos/'
+    \caption{#2} 
+    \label{#3} 
+\end{figure*}
+}
+
+\newcommand{\E}[1]{
+    \cdot 10^{#1}
+}
+
+\newcommand{\abs}[1]{
+    \left\lvert #1 \right\rvert
+}
+
 \begin{document}
     % Create the title page
     \begin{titlepage}
