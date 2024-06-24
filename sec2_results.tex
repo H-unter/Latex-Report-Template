@@ -43,10 +43,27 @@ I don't have any custom commands to make tables, but I can still make them My re
         \bottomrule
     \end{tabular}
     \caption{A small table}
-    \label{tab:dummy}
+    \label{table_dummy}
 \end{table}
 
-I also have configured a way for latex to read \code{.xlsx} and \code{.csv} files
+I (mostly ChatGPT) have configured a way for latex to read \code{.xlsx} and \code{.csv} files, which can be seen in \cref{table_csv}. This table was generated using a \code{.csv} file, with the column names changed to have nice math in them. \Cref{table_csv} shows this
+
+\begin{table}[p]
+    \centering
+    \begin{tabular}{ccccc} % Adjust the widths as needed
+        \toprule
+        \begin{tabular}[c]{@{}c@{}}Reco-\\rding\end{tabular} & 
+        \begin{tabular}[c]{@{}c@{}}$\Delta P_{\text{avg}}$ \\$ - \Delta P_{\text{avg}}'$ (m)\end{tabular} &
+        \begin{tabular}[c]{@{}c@{}}$\Delta P_{\text{fin}}$ \\$ - \Delta P_{\text{fin}}'$ (m)\end{tabular} & 
+        \begin{tabular}[c]{@{}c@{}}$\Delta P_{\text{max}}$ \\$ - \Delta P_{\text{max}}'$ (m)\end{tabular} \\
+        \midrule
+        \csvreader[head to column names, late after line=\\]{tables/data.csv}{}
+        {\csvcoli & \csvcolii & \csvcoliii & \csvcoliv}
+        \bottomrule
+    \end{tabular}
+    \caption{Data from \code{tables/data.csv}}
+    \label{table_csv}
+\end{table}
 
 \subsection{Code}
 
