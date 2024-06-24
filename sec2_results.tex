@@ -46,9 +46,9 @@ I don't have any custom commands to make tables, but I can still make them My re
     \label{table_dummy}
 \end{table}
 
-I (mostly ChatGPT) have configured a way for latex to read \code{.xlsx} and \code{.csv} files, which can be seen in \cref{table_csv}. This table was generated using a \code{.csv} file, with the column names changed to have nice math in them. \Cref{table_csv} shows this
+I (mostly ChatGPT) have configured a way for latex to read \code{.xlsx} and \code{.csv} files, which can be seen in \cref{table_csv}. This table was generated using a \code{.csv} file, with the column names changed to have nice math in them. \Cref{table_csv} shows this.
 
-\begin{table}[p]
+\begin{table}[h]
     \centering
     \begin{tabular}{ccccc} % Adjust the widths as needed
         \toprule
@@ -65,8 +65,15 @@ I (mostly ChatGPT) have configured a way for latex to read \code{.xlsx} and \cod
     \label{table_csv}
 \end{table}
 
+\newpage
+
 \subsection{Code}
 
-I also made a command for inline code, \code{\code{}}. This command takes one argument, the code to be displayed. For example, \code{\code{print("Hello World")}} will display as \code{print("Hello World")}. Groundbreaking, I know 
+I also made a command for inline code, \code{\code{}}. This command takes one argument, the code to be displayed. For example, \code{\code{print("Hello World")}} will display as \code{print("Hello World")}. Groundbreaking, I know. 
+
+I also made a command for code blocks, \code{\codeblock{}{}} \codeblock{python}{Example Python Code}{code_example}{code/python.py}
+This command takes four arguments: the language, the caption, the label, and the filename. Mostly, I'd reccommend using \code{\onecolumn} before using this command. This way, the code won't do any weird overflowing stuff, like you can see on line 24 in \cref{code_example}
+
+
 
 
