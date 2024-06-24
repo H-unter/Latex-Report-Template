@@ -13,7 +13,7 @@
     \centering
     \includegraphics[width=\linewidth]{photos/#1} % Image filename, prefixed with 'photos/'
     \caption{#2} % Caption
-    \label{fig:#3} % Label
+    \label{#3} % Label
 \end{figure}
 }
 
@@ -33,6 +33,12 @@
 \newcommand{\abs}[1]{
     \left\lvert #1 \right\rvert
 }
+
+\newcommand{\note}[1]{\textcolor{red}{#1}} %create a note for yourself
+
+
+\definecolor{codegray}{gray}{0.9} % Light gray color
+\newcommand{\code}[1]{\colorbox{codegray}{\texttt{\detokenize{#1}}}} % Command for inline code
 
 \begin{document}
     % Create the title page

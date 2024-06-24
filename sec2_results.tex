@@ -1,16 +1,55 @@
-\section{Results}
-\lipsum[1]
+\section{Feature Demonstration}
 
-\newpage
+\subsection{Images}
 
-\insertimage{c3.png}{Example Image}{c3}
+I made a couple of latex commands that make inserting images a bit shorter. I made a command called \code{\insertimage{}{}{}}, which takes three arguments: the image filename, the caption, and the label. I also made a command called \code{\insertbigimage{}{}{}}, which does the same thing, but for big images that are too wide to be placed in a single column. \Cref{normal_image,big_image} are the result of using these commands (Though the big image is too big to fit on this page).
 
-The example image is \cref{fig:c3}, figure numero \ref{fig:c3}.
+\insertimage{c3.png}{Example Image}{normal_image}
 
-\insertbigimage{R6.pdf}{asdfasdf}{big}
+\insertbigimage{R6.pdf}{Example Big Image (Made using MATLAB)}{big_image}
 
-\subsection{Part 1}
-\lipsum[1]
+\subsection{Math}
 
-\subsection{Part 2}
-\lipsum[1]
+This isn't really a feature of my template, but more a feature of \LaTeX \ itself. 
+Here is some Math:
+\begin{equation}
+    C = A \times B = \begin{bmatrix}
+        c_{11} & c_{12} & c_{13} \\
+        c_{21} & c_{22} & c_{23} \\
+        c_{31} & c_{32} & c_{33}
+    \end{bmatrix}
+\end{equation}
+Here is some more ChatGPT gave me:
+\begin{equation}
+    \hat{f}(\xi) = \int_{-\infty}^{\infty} f(x) e^{-2 \pi i x \xi} \, dx
+\end{equation}
+I made a couple of commands that make writing math a bit easier. For example, I made a command called \code{\E{}}, which takes one argument, the exponent. For example, \code{\E{3}} will display as $\E{3}$. I also made a command called \code{\abs{}}, which takes one argument, the value to be enclosed in absolute value bars. For example, \code{\abs{-3}} will display as $\abs{-3}$ \footnote[1]{Only works in a math environment, either in an align/equation environment or between \$ \$ symbols. By the way footnotes are also a thing in \LaTeX.}
+
+
+\subsection{Tables}
+
+I don't have any custom commands to make tables, but I can still make them My recommendation is to use ChatGPT to generate the table for you.
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{ll}
+        \toprule
+        \textbf{Column 1} & \textbf{Column 2} \\
+        \midrule
+        Data 1 & Data 2 \\
+        More Data 1 & More Data 2 \\
+        Even More Data 1 & Even More Data 2 \\
+        Dummy Data 1 & Dummy Data 2 \\
+        Another Data 1 & Another Data 2 \\
+        \bottomrule
+    \end{tabular}
+    \caption{A small table}
+    \label{tab:dummy}
+\end{table}
+
+I also have configured a way for latex to read \code{.xlsx} and \code{.csv} files
+
+\subsection{Code}
+
+I also made a command for inline code, \code{\code{}}. This command takes one argument, the code to be displayed. For example, \code{\code{print("Hello World")}} will display as \code{print("Hello World")}. Groundbreaking, I know 
+
+
