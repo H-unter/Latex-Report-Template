@@ -1,17 +1,17 @@
-
-\documentclass[11pt, twocolumn]{article}
+\documentclass[11pt, twocolumn]{article} % get rid of twocolumn for single column (duh)
 \def\name{Hunter Kruger-Ilingworth}
 \def\doctitle{\LaTeX \   Template}
 \def\subjectcode{PH1005}
 \def\studentnumber{14198489}
 \input{header.sty}
-%Choose which files are re-rendered
+
+%Choose which files are re-rendered (saves rendering time)
 %\includeonly{}
 
 \newcommand{\insertimage}[3]{
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\linewidth]{photos/#1} % Image filename, prefixed with 'photos/'
+    \includegraphics[width=\linewidth]{#1} % Image filename
     \caption{#2} % Caption
     \label{#3} % Label
 \end{figure}
@@ -20,7 +20,7 @@
 \newcommand{\insertbigimage}[3]{
 \begin{figure*}[h]
     \centering
-    \includegraphics[width=\linewidth]{photos/#1} % Image filename, prefixed with 'photos/'
+    \includegraphics[width=\linewidth]{#1} % Image filename
     \caption{#2} 
     \label{#3} 
 \end{figure*}
@@ -62,12 +62,10 @@
 
     % Document - place new files as needed
     \clearpage
-
-    %\begin{multicols}{2}
     \input{sec1_intro}
     \input{sec2_results}
     \input{sec3_discussion}
     \input{sec4_conclusion}
-    %\end{multicols}
-    
+    \input{sec5_appendix}
+
 \end{document}

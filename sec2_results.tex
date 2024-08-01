@@ -4,9 +4,9 @@
 
 I made a couple of latex commands that make inserting images a bit shorter. I made a command called \code{\insertimage{}{}{}}, which takes three arguments: the image filename, the caption, and the label. I also made a command called \code{\insertbigimage{}{}{}}, which does the same thing, but for big images that are too wide to be placed in a single column. \Cref{normal_image,big_image} are the result of using these commands (Though the big image is too big to fit on this page).
 
-\insertimage{c3.png}{Example Image}{normal_image}
+%\insertimage{photos/c3.png}{Example Image}{normal_image}
 
-\insertbigimage{R6.pdf}{Example Big Image (Made using MATLAB)}{big_image}
+%\insertbigimage{photos/R6.pdf}{Example Big Image (Made using MATLAB)}{big_image}
 
 \subsection{Math}
 
@@ -20,9 +20,11 @@ Here is some Math:
     \end{bmatrix}
 \end{equation}
 Here is some more ChatGPT gave me:
-\begin{equation}
-    \hat{f}(\xi) = \int_{-\infty}^{\infty} f(x) e^{-2 \pi i x \xi} \, dx
-\end{equation}
+\begin{align*}
+    F(s) &= \mathcal{L} \{ f(t) \} \\
+    &= \int_{0}^{\infty} f(t) e^{-st} \, dt
+\end{align*}
+
 I made a couple of commands that make writing math a bit easier. For example, I made a command called \code{\E{}}, which takes one argument, the exponent. For example, \code{\E{3}} will display as $\E{3}$. I also made a command called \code{\abs{}}, which takes one argument, the value to be enclosed in absolute value bars. For example, \code{\abs{-3}} will display as $\abs{-3}$ \footnote[1]{Only works in a math environment, either in an align/equation environment or between \$ \$ symbols. By the way footnotes are also a thing in \LaTeX.}
 
 
