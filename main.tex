@@ -1,4 +1,4 @@
-\documentclass[11pt, twocolumn]{article} % get rid of twocolumn for single column (duh)
+\documentclass[11pt, twocolumn]{article} 
 \def\name{Hunter Kruger-Ilingworth}
 \def\doctitle{\LaTeX \   Template}
 \def\subjectcode{PH1005}
@@ -58,7 +58,7 @@
     \tableofcontents
     \listoffigures
     \listoftables
-    \twocolumn
+    \twocolumn % get rid of this line if you prefer one column report
 
     % Document - place new files as needed
     \clearpage
@@ -67,5 +67,8 @@
     \input{sec3_discussion}
     \input{sec4_conclusion}
     \input{sec5_appendix}
+
+    \bibliographystyle{IEEEtranN} 
+    \bibliography{references} 
 
 \end{document}
