@@ -1,0 +1,40 @@
+\documentclass[11pt, twocolumn]{article} 
+\def\name{\note{MY NAME}}
+\def\doctitle{\note{DOCUMENT TITLE}}
+\def\subjectcode{\note{SUBJECT CODE}}
+\def\studentnumber{\note{STUDENT NUMBER}}
+\input{packages.sty}
+\input{macros.sty}
+
+%Choose which files are re-rendered (saves rendering time)
+%\includeonly{}
+
+\begin{document}
+    % Create the title page
+    \begin{titlepage}
+        \maketitle
+        \thispagestyle{empty} %suppresses page numbering on the title page
+    \end{titlepage}
+
+    % Table of Contents
+    \thispagestyle{empty} % Suppresses page numbering on the contents page
+    \onecolumn
+    \tableofcontents
+    \listoffigures
+    \listoftables
+    \twocolumn % get rid of this line if you prefer one column report
+
+    \clearpage
+    \input{sec_1_content.tex}
+    %\input{sec_2_content.tex}
+    %\input{sec_3_content.tex}
+
+    % bibliography at the end
+    %\clearpage % uncomment if you want the references on a new page
+    \onecolumn % uncomment if you want the references in one column
+
+    \bibliographystyle{ieeetran}
+    \section{References}  % This creates a numbered section heading for References
+    \bibliography{references.bib}
+
+\end{document}

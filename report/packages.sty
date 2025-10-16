@@ -1,20 +1,31 @@
 % Geometry and Layout
     \usepackage[margin=0.75in]{geometry}
-    \usepackage{multicol}
+    \usepackage{parskip}
+    \usepackage{placeins} % FloatBarrier
 
+% Font
+    \usepackage[T1]{fontenc}      
+    \usepackage{fourier}          % sick font
+
+% inline typsetting of units and quantities
+    \usepackage{siunitx}
 % Graphics and Diagrams
+    \usepackage{wrapfig}
+
     \usepackage{xcolor}
     \usepackage{graphicx} % Required for inserting images
     \usepackage[american]{circuitikz}
     \usepackage{tikz}
     \usepackage{tikz-3dplot}
     \usetikzlibrary{arrows.meta}
+    \usetikzlibrary{positioning}  % Add this line to load the positioning library
     \usepackage{pgfplots}
     \pgfplotsset{compat=newest}
     \usepackage{listings}
     \usepackage{tcolorbox}
 
 % CSV Table input
+    \usepackage[table]{xcolor}
     \usepackage{csvsimple, booktabs}
 
 % Code Chunk Formatting
@@ -28,7 +39,7 @@
     commentstyle=\color{comment_color},       % Style of comments
     keywordstyle=\color{keyword_color},        % Style of keywords
     stringstyle=\color{red},              % Style of strings, assuming red
-    basicstyle=\footnotesize\ttfamily, % Set font size, monospaced font, and color        
+    basicstyle=\tiny\ttfamily, % Set font size, monospaced font, and color        
     breakatwhitespace=false,              % Automatic line breaking only at whitespace
     breaklines=true,                      % Automatic line breaking
     captionpos=t,                         % Caption position is on top
@@ -37,14 +48,18 @@
     numbersep=5pt,                        % How far the line numbers are from the code
     showspaces=false,                     % Show spaces in the code
     showstringspaces=false,               % Underline spaces within strings only
-    showtabs=false,                       % Show tabs within strings adding particular underscores
-    tabsize=2,                            % Sets default tab size
+    showtabs=true,                       % Show tabs within strings adding particular underscores
+    % framexleftmargin=5pt,                       % Extra space on the left for better aesthetics
+    xleftmargin=0.05\textwidth,                 % Indent from the left
+    xrightmargin=0.05\textwidth,                % Indent from the right
+    tabsize=1,                            % Sets default tab size
     title=\lstname                        % Show the filename of files included with \lstinputlisting
 }
 % Text Content / Math
     \usepackage{lipsum} % Dummy text
     \usepackage{hyperref}
     \usepackage{amsmath} % For sum symbol and other math formatting
+    \usepackage{amssymb}
 
 % Headers and Footers
     \usepackage{lastpage}
@@ -62,8 +77,9 @@
     \renewcommand{\headrulewidth}{0pt}
 
 % Caption and Referencing Customization
-    \usepackage{caption}
+    \usepackage[justification=centering]{caption}
     \usepackage{cleveref}
+    \usepackage{nameref}
     \DeclareCaptionLabelSeparator{IEEE}{.\quad }
     \captionsetup[figure]{name=Fig., labelsep=IEEE}
     \captionsetup{format=hang, labelfont=bf}
@@ -74,5 +90,6 @@
     \author{\name{} (\studentnumber{})}
     \date{\today}
 
-% References
-    \usepackage{natbib}
+% Referencing
+    \usepackage[noadjust]{cite} % For IEEE-style citations
+    \renewcommand{\refname}{} % Remove "References" title

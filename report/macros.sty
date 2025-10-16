@@ -1,0 +1,18 @@
+\newcommand{\codeblock}[4]{
+    \lstinputlisting[language=#1, caption={#2}, label=#3]{#4}
+} %command for inserting code blocks because im a G
+
+
+\newcommand{\E}[1]{
+    \cdot 10^{#1}
+} % way easier to type
+
+\newcommand{\abs}[1]{
+    \left\lvert #1 \right\rvert
+} % feels like it should be a command by default to be honest
+
+\newcommand{\note}[1]{\textcolor{red}{#1}} %create a red note for yourself
+
+
+\definecolor{codegray}{gray}{0.9} % Light gray color
+\newcommand{\code}[1]{\colorbox{codegray}{\texttt{\detokenize{#1}}}} % Command for inline code
